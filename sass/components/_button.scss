@@ -1,0 +1,27 @@
+.button {
+  display: block;
+  height: 50px;
+  /* margin-top: 38px; */
+  padding: 10px 32px;
+
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.9;
+  text-decoration: none;
+  color: $primary-white-color;
+  cursor: pointer;
+
+  background-color: $accent-color;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: 0;
+
+  transition: background-color 250ms $cubic, color 250ms $cubic;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+    background-color: $primary-white-color;
+  }
+}

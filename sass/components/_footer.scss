@@ -1,0 +1,110 @@
+.footer {
+  padding-top: 48px;
+  padding-bottom: 21px;
+  background-color: $footer-color;
+}
+.logo--footer {
+  margin-bottom: 10px;
+}
+.logo--white {
+  color: $primary-white-color;
+}
+.adress__adress {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 2.36;
+
+  letter-spacing: 0.03em;
+
+  color: $primary-white-color;
+}
+
+.adress__adress--transparend {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.71;
+
+  letter-spacing: 0.03em;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.container--horizontal {
+  align-items: baseline;
+}
+.join__text {
+  margin: 0 0 21px 0;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: $primary-white-color;
+}
+.social-list__item--tranparend {
+  background-color: $footer-social;
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.sign__buttons {
+  display: flex;
+  cursor: pointer;
+}
+.sign__text {
+  margin: 0 0 21px 0;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: $primary-white-color;
+}
+.sign__email {
+  display: flex;
+  align-items: center;
+  margin: 0 12px 0 0;
+  padding: 18px 12px;
+
+  width: 358px;
+  height: 50px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  background-color: $footer-color;
+}
+.sign__button {
+  display: flex;
+  margin: 0;
+  cursor: pointer;
+}
+.sign__svg {
+  margin-left: 10px;
+  fill: $primary-white-color;
+  transition: fill 250ms $cubic;
+}
+.sign__button:hover .sign__svg {
+  fill: $accent-color;
+}
+.container--horizontal {
+  padding-bottom: 28px;
+  border-bottom: 1px solid $footer-social;
+}
+.copyright {
+  margin: 18px 0 0 0;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: $copyright-text-color;
+}

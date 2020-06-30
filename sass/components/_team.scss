@@ -1,0 +1,98 @@
+/* OUR TEAM */
+
+.container--our-team {
+  flex-direction: column;
+  padding: 94px 0;
+}
+.our-team__title {
+  margin-top: 0;
+  margin-bottom: 50px;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: $title-text-color;
+}
+
+.our-team {
+  background-color: $grey-svg-color;
+}
+.our-team__card {
+  width: 270px;
+  padding: 30px 32px 24px 32px;
+
+  background: $primary-white-color;
+
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 0 0 4px 4px;
+}
+
+.our-team__list {
+  width: 1170px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.our-team__member {
+}
+
+.our-team__member:before {
+  content: '';
+  display: block;
+  width: 270px;
+  height: 260px;
+
+  border-radius: 4px 4px 0px 0px;
+
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+.our-team__member--01:before {
+  background-image: url('../../images/johnSmith.jpg');
+}
+.our-team__member--02:before {
+  background-image: url('../../images/martaSteward.jpg');
+}
+.our-team__member--03:before {
+  background-image: url('../../images/robertJakis.jpg');
+}
+.our-team__member--04:before {
+  background-image: url('../../images/martinDoe.jpg');
+}
+
+.our-team__name {
+  margin: 0 0 10px 0;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: $title-text-color;
+}
+.our-team__profession {
+  margin: 0 0 16px 0;
+  padding: 0;
+  text-align: center;
+
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.19;
+
+  letter-spacing: 0.03em;
+
+  color: $primary-text-color;
+}

@@ -1,0 +1,134 @@
+.works__list {
+  padding-bottom: 94px;
+  padding-left: 0;
+  margin: 0;
+  width: 1170;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.works__item {
+  transition: box-shadow 250ms $cubic;
+
+  &:hover,
+  &:focus {
+    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      0px 1px 1px rgba(0, 0, 0, 0.12);
+  }
+
+  &:nth-child(-n + 6) {
+    margin-bottom: 30px;
+  }
+}
+
+.works__picture {
+  border-left: 1px solid $works--border;
+  border-right: 1px solid $works--border;
+  border-top: 1px solid $works--border;
+}
+.works__overlay {
+  position: relative;
+  overflow: hidden;
+
+  &:before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-color: $card-overlay;
+
+    transform: translateY(100%);
+    opacity: 0;
+
+    transition: transform 250ms $cubic, opacity 250ms $cubic;
+
+    /* pointer-events: none; */
+  }
+}
+
+.works__item:hover .works__overlay:before {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.works__overlay--text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  display: block;
+  width: 322px;
+  margin: 0;
+
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.56;
+
+  letter-spacing: 0.03em;
+
+  color: $primary-white-color;
+
+  transform: translate(-50%, 100%);
+  opacity: 0;
+  transition: transform 250ms $cubic, opacity 250ms $cubic;
+}
+.works__item:hover .works__overlay--text,
+.works__item:focus .works__overlay--text {
+  transform: translate(-50%, -50%);
+  opacity: 1;
+
+  animation-name: animationName;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes animationName {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.works__ref {
+  display: block;
+  padding: 20px 24px;
+  width: 370px;
+  height: 110px;
+  text-decoration: none;
+  background-color: $primary-white-color;
+  border-left: 1px solid $works--border;
+  border-right: 1px solid $works--border;
+  border-bottom: 1px solid $works--border;
+}
+
+.works__title {
+  margin: 0 0 4px 0;
+  padding: 0;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+
+  letter-spacing: 0.06em;
+
+  color: $title-text-color;
+}
+
+.works__belonging {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.87;
+
+  letter-spacing: 0.03em;
+
+  color: $primary-text-color;
+}
