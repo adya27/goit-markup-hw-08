@@ -18,8 +18,8 @@ function logBackdropClick() {
 }
 
 (() => {
-  const menuBtnRef = document.querySelector('[data-menu-button]');
-  const mobileMenuRef = document.querySelector('[data-menu]');
+  const menuBtnRef = document.querySelector('[data-menu-button2]');
+  const mobileMenuRef = document.querySelector('[data-menu2]');
 
   menuBtnRef.addEventListener('click', () => {
     const expanded =

@@ -23,3 +23,9 @@
 //   .logo--black {
 //     color: $title-text-color;
 //   }
+@media screen and (max-width: $desktop) {
+  .logo--black {
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+}

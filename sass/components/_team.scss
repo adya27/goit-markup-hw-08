@@ -2,14 +2,32 @@
 
 .container--our-team {
   flex-direction: column;
-  padding: 94px 0;
+  padding: 60px 15px;
+}
+@media screen and (min-width: $desktop) {
+  .container--our-team {
+    padding: 94px 0;
+  }
+  .our-team__title {
+    margin-bottom: 50px;
+
+    font-size: 36px;
+  }
+  .our-team__card {
+    width: 270px;
+  }
+  .our-team__list {
+    width: 1170px;
+
+    flex-direction: row;
+  }
 }
 .our-team__title {
   margin-top: 0;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
@@ -21,8 +39,13 @@
   background-color: $grey-svg-color;
 }
 .our-team__card {
-  width: 270px;
+  width: 450px;
   padding: 30px 32px 24px 32px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
   background: $primary-white-color;
 
@@ -32,9 +55,9 @@
 }
 
 .our-team__list {
-  width: 1170px;
+  width: 450px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
 
@@ -42,15 +65,65 @@
   margin: 0;
   padding: 0;
 }
-
-.our-team__member {
+@media screen and (max-width: ($tablet - 1px)) {
+  .our-team__member:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
-
+@media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
+  .our-team__member:not(:nth-last-child(-n + 2)) {
+    margin-bottom: 30px;
+  }
+}
 .our-team__member:before {
   content: '';
   display: block;
-  width: 270px;
-  height: 260px;
+  width: 450px;
+  height: 320px;
+  background-size: cover;
+  width: 100%;
+
+  border-radius: 4px 4px 0px 0px;
+
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+@media screen and (min-width: $tablet) {
+  .our-team__member:before {
+    width: 354px;
+    height: 260px;
+  }
+  .our-team__card {
+    width: 354px;
+    @media screen and (min-width: $desktop) {
+      width: 270px;
+    }
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
+    .our-team__member:not(:nth-child(n + 3)) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .our-team__list {
+    width: 738px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    @media screen and (min-width: $desktop) {
+      width: 1200px;
+      padding: 0 15px;
+    }
+  }
+}
+.our-team__member:before {
+  content: '';
+  display: block;
+  width: 450px;
+  height: 320px;
+  background-size: cover;
+  width: 100%;
 
   border-radius: 4px 4px 0px 0px;
 

@@ -1,4 +1,6 @@
 @import './utils/_variables';
+@import './utils/breakpoints';
+@import './utils/visually-hidden';
 @import './components/_common';
 @import './components/_logo';
 @import './components/navigation';
@@ -17,4 +19,4 @@
 @import './components/footer';
 @import './components/filter';
 @import './components/portfolio';
-@import './utils/visually-hidden'
+@import './components/icon-burger';

@@ -13,19 +13,18 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./dist/css/main.min.css" />
-    
   </head>
 
   <body>
-    
     <!-- HEADDER -->
 
-    <header class="header--portfolio">
+    <header class="header">
       <div class="container">
-        <nav class="navigation">
-          <a class="logo" href="./index.html"
-            >Web&nbsp;<span class="logo logo--black">Studio</span></a
-          >
+        <a class="logo" href="./index.html"
+          >Web&nbsp;<span class="logo logo--black">Studio</span></a
+        >
+
+        <nav class="navigation" id="navigation2" data-menu2>
           <ul class="navigation__list">
             <li class="navigation__item">
               <a class="navigation__ref" href="./index.html">Студия</a>
@@ -41,28 +40,47 @@
               <a class="navigation__ref" href="">Контакты</a>
             </li>
           </ul>
+
+          <section class="contacts">
+            <h2 class="contacts__title">Контакты</h2>
+            <ul class="contacts__list">
+              <li class="contacts__item">
+                <a href="mailto:info@devstudio.com" class="contacts__ref">
+                  <svg class="contacts__svg" width="16" height="11.2">
+                    <use href="./images/sprite.svg#mail"></use>
+                  </svg>
+                  info@devstudio.com</a
+                >
+              </li>
+              <li class="contacts__item">
+                <a href="tel:+380966955510" class="contacts__ref">
+                  <svg class="contacts__svg" width="10" height="14.94">
+                    <use href="./images/sprite.svg#tel"></use>
+                  </svg>
+                  +38 096 69 555 10
+                </a>
+              </li>
+            </ul>
+          </section>
         </nav>
-        <section class="contacts">
-          <h2 class="contacts__title">Контакты</h2>
-          <ul class="contacts__list">
-            <li class="contacts__item">
-              <a href="mailto:info@devstudio.com" class="contacts__ref">
-                <svg class="contacts__svg" width="16" height="11.2">
-                  <use href="./images/sprite.svg#mail"></use>
-                </svg>
-                info@devstudio.com</a
-              >
-            </li>
-            <li class="contacts__item">
-              <a href="tel:+380966955510" class="contacts__ref">
-                <svg class="contacts__svg" width="10" height="14.94">
-                  <use href="./images/sprite.svg#tel"></use>
-                </svg>
-                +38 096 69 555 10
-              </a>
-            </li>
-          </ul>
-        </section>
+
+        <button
+          type="button"
+          class="burger__button"
+          aria-expanded="false"
+          aria-controls="navigation2"
+          data-menu-button2
+        >
+          <svg
+            class="burger__svg"
+            width="40"
+            height="40"
+            aria-label="Переключатель мобильного меню"
+          >
+            <use class="icon-open" href="./images/sprite.svg#open-menu"></use>
+            <use class="icon-close" href="./images/sprite.svg#close-menu"></use>
+          </svg>
+        </button>
       </div>
     </header>
 
@@ -285,6 +303,7 @@
         </ul>
       </div>
     </section>
+
     <!-- FOOTER -->
     <footer class="footer">
       <div class="container container--horizontal">
@@ -302,7 +321,7 @@
         </div>
         <div class="join">
           <p class="join__text">присоединяйтесь</p>
-          <ul class="social-list">
+          <ul class="social-list social-list--footer">
             <li class="social-list__item social-list__item--tranparend">
               <!-- instagram -->
 
@@ -346,9 +365,9 @@
           <p class="sign__text">Подпишитесь на рассылку</p>
 
           <!--
-      
-      
-                  -->
+
+
+            -->
           <div class="sign__buttons">
             <input
               name="email"
@@ -366,14 +385,29 @@
           </div>
 
           <!-- 
-      
-      
-                 -->
+
+
+           -->
         </form>
       </div>
-
       <p class="copyright">2020 | Developed by GoIT Students</p>
     </footer>
-    <script src="script.js"></script>
+    <script src="./script2.js"></script>
+    <script>
+      () => {
+        const menuBtnRef = document.querySelector('[data-menu-button2]');
+        const mobileMenuRef = document.querySelector('[data-menu2]');
+
+        menuBtnRef.addEventListener('click', () => {
+          const expanded =
+            menuBtnRef.getAttribute('aria-expanded') === 'true' || false;
+
+          menuBtnRef.classList.toggle('is-open');
+          menuBtnRef.setAttribute('aria-expanded', !expanded);
+
+          mobileMenuRef.classList.toggle('is-open');
+        });
+      };
+    </script>
   </body>
 </html>

@@ -1,6 +1,6 @@
 .footer {
-  padding-top: 48px;
-  padding-bottom: 21px;
+  // padding-top: 48px;
+  // padding-bottom: 21px;
   background-color: $footer-color;
 }
 .logo--footer {
@@ -10,6 +10,7 @@
   color: $primary-white-color;
 }
 .adress__adress {
+  text-align: center;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -29,11 +30,30 @@
 
   color: rgba(255, 255, 255, 0.6);
 }
+.adress {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-.container--horizontal {
-  align-items: baseline;
+  @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
+    width: 50%;
+  }
+  @media screen and (min-width: $desktop) {
+    align-items: start;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .container--horizontal {
+    align-items: baseline;
+  }
+  .adress__adress {
+    text-align: left;
+  }
 }
 .join__text {
+  text-align: center;
   margin: 0 0 21px 0;
   font-weight: 700;
   font-size: 14px;
@@ -42,7 +62,11 @@
   text-transform: uppercase;
 
   color: $primary-white-color;
+  @media screen and (min-width: $desktop) {
+    text-align: left;
+  }
 }
+
 .social-list__item--tranparend {
   background-color: $footer-social;
 
@@ -94,8 +118,12 @@
   fill: $accent-color;
 }
 .container--horizontal {
-  padding-bottom: 28px;
-  border-bottom: 1px solid $footer-social;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  // border-bottom: 1px solid $footer-social;
+  @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
+    flex-wrap: wrap;
+  }
 }
 .copyright {
   margin: 18px 0 0 0;
@@ -107,4 +135,63 @@
   letter-spacing: 0.03em;
 
   color: $copyright-text-color;
+}
+
+@media screen and (max-width: $desktop) {
+  .social-list--footer {
+    align-content: center;
+    justify-content: center;
+  }
+  .join,
+  .sign {
+    margin-top: 60px;
+    @media screen and (min-width: $desktop) {
+      margin-top: 0;
+    }
+  }
+  .join {
+    @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
+      width: 50%;
+      margin-top: 0;
+    }
+  }
+  .sign {
+    @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
+      width: 100%;
+      padding-left: 166px - 15px;
+      padding-right: 152px - 15px;
+      // margin-top: 0;
+    }
+  }
+  .sign__text {
+    text-align: center;
+    @media screen and (min-width: $desktop) {
+      text-align: left;
+    }
+  }
+  .sign__buttons {
+    flex-direction: column;
+    @media screen and (min-width: $desktop) {
+      flex-direction: row;
+    }
+  }
+  .sign__email {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+    @media screen and (min-width: $desktop) {
+      width: 358px;
+      margin-right: 12px;
+      margin-bottom: 0;
+    }
+  }
+  .sign__button {
+    width: 200px;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.copyright {
+  display: none;
 }

@@ -4,9 +4,20 @@
 .contacts__list {
   list-style: none;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin: 0;
   margin-left: auto;
   padding: 0;
+}
+@media screen and (min-width: $tablet) and (max-width: ($desktop - 1px)) {
+  .contacts__list {
+    align-items: start;
+  }
+  .contacts__item:nth-child(2) {
+    margin-top: 10px;
+  }
 }
 
 .contacts__ref {
@@ -29,9 +40,6 @@
     color: $accent-color;
   }
 }
-.contacts__item:not(:last-child) {
-  margin-right: 30px;
-}
 
 .contacts__svg {
   margin-right: 10px;
@@ -44,4 +52,33 @@
 .contacts__ref:hover .contacts__svg,
 .contacts__ref:focus .contacts__svg {
   fill: $accent-color;
+}
+@media screen and (max-width: ($tablet - 1px)) {
+  .contacts__item:nth-child(1) {
+    margin-top: 52px;
+  }
+  .contacts__item:nth-child(2) {
+    margin-top: 16px;
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .contacts__list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    // margin-left: auto;
+    padding: 0;
+  }
+  .contacts__item:not(:last-child) {
+    margin-right: 30px;
+  }
+  .contacts__ref,
+  .contacts__item {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }

@@ -4,12 +4,23 @@
 
 .filter__list {
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
   justify-content: center;
   width: 1170px;
   margin: 0;
   padding-top: 93px;
   padding-bottom: 50px;
+  padding-left: 0;
+  @media screen and (max-width: $tablet - 1px) {
+    justify-content: start;
+    align-items: center;
+
+    width: 100%;
+    margin: -7.5px;
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
 }
 .button--filter {
   margin-top: 0;
@@ -36,4 +47,10 @@
 
 .filter__button:not(:last-child) {
   margin-right: 6px;
+}
+
+.filter__button {
+  @media screen and (max-width: $tablet - 1px) {
+    margin: 7.5px;
+  }
 }

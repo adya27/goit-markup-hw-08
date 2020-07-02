@@ -13,18 +13,17 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./dist/css/main.min.css " />
-    
   </head>
   <body>
-   
     <!-- HEADDER -->
 
     <header class="header">
       <div class="container">
-        <nav class="navigation">
-          <a class="logo" href="./index.html"
-            >Web&nbsp;<span class="logo logo--black">Studio</span></a
-          >
+        <a class="logo" href="./index.html"
+          >Web&nbsp;<span class="logo logo--black">Studio</span></a
+        >
+
+        <nav class="navigation" id="navigation" data-menu>
           <ul class="navigation__list">
             <li class="navigation__item">
               <a
@@ -40,28 +39,47 @@
               <a class="navigation__ref" href="">Контакты</a>
             </li>
           </ul>
+
+          <section class="contacts">
+            <h2 class="contacts__title">Контакты</h2>
+            <ul class="contacts__list">
+              <li class="contacts__item">
+                <a href="mailto:info@devstudio.com" class="contacts__ref">
+                  <svg class="contacts__svg" width="16" height="11.2">
+                    <use href="./images/sprite.svg#mail"></use>
+                  </svg>
+                  info@devstudio.com</a
+                >
+              </li>
+              <li class="contacts__item">
+                <a href="tel:+380966955510" class="contacts__ref">
+                  <svg class="contacts__svg" width="10" height="14.94">
+                    <use href="./images/sprite.svg#tel"></use>
+                  </svg>
+                  +38 096 69 555 10
+                </a>
+              </li>
+            </ul>
+          </section>
         </nav>
-        <section class="contacts">
-          <h2 class="contacts__title">Контакты</h2>
-          <ul class="contacts__list">
-            <li class="contacts__item">
-              <a href="mailto:info@devstudio.com" class="contacts__ref">
-                <svg class="contacts__svg" width="16" height="11.2">
-                  <use href="./images/sprite.svg#mail"></use>
-                </svg>
-                info@devstudio.com</a
-              >
-            </li>
-            <li class="contacts__item">
-              <a href="tel:+380966955510" class="contacts__ref">
-                <svg class="contacts__svg" width="10" height="14.94">
-                  <use href="./images/sprite.svg#tel"></use>
-                </svg>
-                +38 096 69 555 10
-              </a>
-            </li>
-          </ul>
-        </section>
+
+        <button
+          type="button"
+          class="burger__button"
+          aria-expanded="false"
+          aria-controls="navigation"
+          data-menu-button
+        >
+          <svg
+            class="burger__svg"
+            width="40"
+            height="40"
+            aria-label="Переключатель мобильного меню"
+          >
+            <use class="icon-open" href="./images/sprite.svg#open-menu"></use>
+            <use class="icon-close" href="./images/sprite.svg#close-menu"></use>
+          </svg>
+        </button>
       </div>
     </header>
 
@@ -102,7 +120,13 @@
           </div>
 
           <div class="name-form">
-            <input name="phone" class="form" id="tel" type="tel" placeholder=" " />
+            <input
+              name="phone"
+              class="form"
+              id="tel"
+              type="tel"
+              placeholder=" "
+            />
             <label class="form__label" for="tel">
               Телефон
             </label>
@@ -112,7 +136,13 @@
           </div>
 
           <div class="name-form">
-            <input name="email" class="form" id="mail" type="email" placeholder=" " />
+            <input
+              name="email"
+              class="form"
+              id="mail"
+              type="email"
+              placeholder=" "
+            />
             <label class="form__label" for="mail">
               Почта
             </label>
@@ -532,7 +562,7 @@
         </div>
         <div class="join">
           <p class="join__text">присоединяйтесь</p>
-          <ul class="social-list">
+          <ul class="social-list social-list--footer">
             <li class="social-list__item social-list__item--tranparend">
               <!-- instagram -->
 

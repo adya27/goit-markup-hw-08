@@ -100,13 +100,20 @@
 .works__ref {
   display: block;
   padding: 20px 24px;
-  width: 370px;
   height: 110px;
+  width: 450px;
   text-decoration: none;
   background-color: $primary-white-color;
   border-left: 1px solid $works--border;
   border-right: 1px solid $works--border;
   border-bottom: 1px solid $works--border;
+
+  @media screen and (min-width: $tablet) {
+    width: 354px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 370px;
+  }
 }
 
 .works__title {
