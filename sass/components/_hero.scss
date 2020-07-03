@@ -49,6 +49,10 @@
   }
   .hero {
     height: 600px;
+margin-left: auto;
+margin-right: auto;
+
+ 
   }
 }
 
@@ -86,6 +90,8 @@
 
 @media screen and (min-width: $desktop) {
   .hero {
+    
+
     background-image: linear-gradient(
         rgba(47, 48, 58, 0.8),
         rgba(47, 48, 58, 0.8)
@@ -97,6 +103,8 @@
     screen and (min-resolution: 192dpi),
     screen and (min-resolution: 2dppx) {
     .hero {
+  
+
       background-image: linear-gradient(
           rgba(47, 48, 58, 0.8),
           rgba(47, 48, 58, 0.8)
@@ -126,4 +134,8 @@
         url('../../images/heroTab@2x.jpg');
     }
   }
+}
+.hero {
+ margin-left: auto;
+ margin-right: auto;
 }
