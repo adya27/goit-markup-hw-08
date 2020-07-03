@@ -1,13 +1,27 @@
 .works__list {
-  padding-bottom: 94px;
-  padding-left: 0;
-  margin: 0;
-  width: 1170;
   list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
+  padding-left: 0;
+  padding-bottom: 60px;
+  margin: 0;
+  @media screen and (min-width: $desktop) {
+    padding-bottom: 94px;
+    padding-left: 0;
+
+    max-width: 1170;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
+    max-width: $tablet - 30px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 .works__item {
   transition: box-shadow 250ms $cubic;
@@ -17,9 +31,20 @@
     box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
       0px 1px 1px rgba(0, 0, 0, 0.12);
   }
-
-  &:nth-child(-n + 6) {
-    margin-bottom: 30px;
+  @media screen and (max-width: $tablet - 1px) {
+    &:nth-child(-n + 8) {
+      margin-bottom: 30px;
+    }
+  }
+  @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
+    &:nth-child(-n + 8) {
+      margin-bottom: 30px;
+    }
+  }
+  @media screen and (min-width: $desktop) {
+    &:nth-child(-n + 6) {
+      margin-bottom: 30px;
+    }
   }
 }
 
@@ -99,9 +124,9 @@
 
 .works__ref {
   display: block;
-  padding: 20px 24px;
+  padding: 20px 0 24px 20px;
   height: 110px;
-  width: 450px;
+  max-width: 450px;
   text-decoration: none;
   background-color: $primary-white-color;
   border-left: 1px solid $works--border;

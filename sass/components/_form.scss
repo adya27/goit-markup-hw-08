@@ -119,12 +119,13 @@
 }
 .label--accent {
   display: inline;
+
   color: $accent-color;
   text-decoration: none;
   @media screen and (max-width: $desktop) {
     font-size: 12px;
   }
-  margin-left: 5px;
+  // margin-left: 5px;
   /* border-bottom: 1px solid $accent-color); */
 
   &::after {
@@ -159,7 +160,7 @@
   background-position: 50% 50%;
 }
 .form-checkbox__input:checked + .chekbox__custom {
-  margin: 3px 8px;
+  margin: 3px 8px 3px 0;
   width: 15px;
   height: 15px;
   background-image: url(../../images/checked.svg);

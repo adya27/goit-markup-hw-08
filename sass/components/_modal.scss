@@ -6,7 +6,6 @@
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
-  overflow-y: scroll;
 }
 
 .backdrop.is-hidden {
@@ -38,16 +37,19 @@
 }
 @media screen and (min-width: $desktop) {
   .modal {
-    width: 528px;
+    max-width: 528px;
+    // height: 581px;
   }
 }
-@media screen and (max-width: $tablet) {
+@media screen and (max-width: $desktop - 1px) {
   .modal {
     position: relative;
     margin-top: 223px;
+    margin-bottom: 223px;
   }
   .backdrop {
     padding-left: 15px;
     padding-right: 15px;
+    overflow-y: scroll;
   }
 }

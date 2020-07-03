@@ -19,9 +19,32 @@
 
     <header class="header">
       <div class="container">
-        <a class="logo" href="./index.html"
-          >Web&nbsp;<span class="logo logo--black">Studio</span></a
-        >
+        <div class="container--mobile">
+          <a class="logo" href="./index.html"
+            >Web&nbsp;<span class="logo logo--black">Studio</span></a
+          >
+
+          <button
+            type="button"
+            class="burger__button"
+            aria-expanded="false"
+            aria-controls="navigation"
+            data-menu-button
+          >
+            <svg
+              class="burger__svg"
+              width="40"
+              height="40"
+              aria-label="Переключатель мобильного меню"
+            >
+              <use class="icon-open" href="./images/sprite.svg#open-menu"></use>
+              <use
+                class="icon-close"
+                href="./images/sprite.svg#close-menu"
+              ></use>
+            </svg>
+          </button>
+        </div>
 
         <nav class="navigation" id="navigation" data-menu>
           <ul class="navigation__list">
@@ -62,24 +85,6 @@
             </ul>
           </section>
         </nav>
-
-        <button
-          type="button"
-          class="burger__button"
-          aria-expanded="false"
-          aria-controls="navigation"
-          data-menu-button
-        >
-          <svg
-            class="burger__svg"
-            width="40"
-            height="40"
-            aria-label="Переключатель мобильного меню"
-          >
-            <use class="icon-open" href="./images/sprite.svg#open-menu"></use>
-            <use class="icon-close" href="./images/sprite.svg#close-menu"></use>
-          </svg>
-        </button>
       </div>
     </header>
 
@@ -174,9 +179,10 @@
                 value="music"
               />
               <span class="chekbox__custom"></span>
-              Соглашаюсь с рассылкой и принимаю
-              <a class="label--accent" href="">Условия договора</a></label
-            >
+              
+                Соглашаюсь с рассылкой и принимаю&nbsp
+                <a class="label--accent" href="">Условия договора</a>            
+              </span>
           </div>
           <button type="submit" data-close-modal class="button button--modal">
             Отправить
@@ -299,8 +305,38 @@
         <h2 class="our-team__title">Наша команда</h2>
         <ul class="our-team__list">
           <li class="our-team__member our-team__member--01">
+            <div class="img-container">
+              <picture>
+                <source
+                  srcset="
+                    ./images/nickKu.jpg    1x,
+                    ./images/nickKu@2x.jpg 2x,
+                    ./images/nickKu@3x.jpg 3x
+                  "
+                  media="(max-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./images/nickKuTab.jpg    1x,
+                    ./images/nickKuTab@2x.jpg 2x,
+                    ./images/nickKuTab@3x.jpg 3x
+                  "
+                  media="(max-width:1200px)"
+                />
+                <img
+                  srcset="
+                    ./images/nickKuDesk.jpg    1x,
+                    ./images/nickKuDesk@2x.jpg 2x,
+                    ./images/nickKuDesk@3x.jpg 3x
+                  "
+                  class="img--team"
+                  src="./images/nickKu.jpg"
+                  alt="Николай Кучеренко"
+                />
+              </picture>
+            </div>
             <div class="our-team__card">
-              <h3 class="our-team__name">John Smith</h3>
+              <h3 class="our-team__name">Николай Кучеренко</h3>
               <p class="our-team__profession">Product Designer</p>
               <ul class="social-list">
                 <li class="social-list__item">
@@ -344,8 +380,38 @@
             </div>
           </li>
           <li class="our-team__member our-team__member--02">
+            <div class="img-container">
+              <picture>
+                <source
+                  srcset="
+                    ./images/olgIv.jpg    1x,
+                    ./images/olgIv@2x.jpg 2x,
+                    ./images/olgIv@3x.jpg 3x
+                  "
+                  media="(max-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./images/olgIvTab.jpg    1x,
+                    ./images/olgIvTab@2x.jpg 2x,
+                    ./images/olgIvTab@3x.jpg 3x
+                  "
+                  media="(max-width:1200px)"
+                />
+                <img
+                  class="img--team"
+                  srcset="
+                    ./images/olgIvDesk.jpg    1x,
+                    ./images/olgIvDesk@2x.jpg 2x,
+                    ./images/olgIvDesk@3x.jpg 3x
+                  "
+                  src="./images/olgIv.jpg"
+                  alt="Ольга Иванова"
+                />
+              </picture>
+            </div>
             <div class="our-team__card">
-              <h3 class="our-team__name">Marta Stewart</h3>
+              <h3 class="our-team__name">Ольга Иванова</h3>
               <p class="our-team__profession">Frontend Developer</p>
               <ul class="social-list">
                 <li class="social-list__item">
@@ -389,8 +455,38 @@
             </div>
           </li>
           <li class="our-team__member our-team__member--03">
+            <div class="img-container">
+              <picture>
+                <source
+                  srcset="
+                    ./images/andS.jpg    1x,
+                    ./images/andS@2x.jpg 2x,
+                    ./images/andS@3x.jpg 3x
+                  "
+                  media="(max-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./images/andSTab.jpg    1x,
+                    ./images/andSTab@2x.jpg 2x,
+                    ./images/andSTab@3x.jpg 3x
+                  "
+                  media="(max-width:1200px)"
+                />
+                <img
+                  class="img--team"
+                  srcset="
+                    ./images/andSDesk.jpg    1x,
+                    ./images/andSDesk@2x.jpg 2x,
+                    ./images/andSDesk@3x.jpg 3x
+                  "
+                  src="./images/andS.jpg"
+                  alt="Андрей Шевченко"
+                />
+              </picture>
+            </div>
             <div class="our-team__card">
-              <h3 class="our-team__name">Robert Jakis</h3>
+              <h3 class="our-team__name">Андрей Шевченко</h3>
               <p class="our-team__profession">Marketing</p>
               <ul class="social-list">
                 <li class="social-list__item">
@@ -434,8 +530,38 @@
             </div>
           </li>
           <li class="our-team__member our-team__member--04">
+            <div class="img-container">
+              <picture>
+                <source
+                  srcset="
+                    ./images/iVNick.jpg    1x,
+                    ./images/iVNick@2x.jpg 2x,
+                    ./images/iVNick@3x.jpg 3x
+                  "
+                  media="(max-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./images/iVNickTab.jpg    1x,
+                    ./images/iVNickTab@2x.jpg 2x,
+                    ./images/iVNickTab@3x.jpg 3x
+                  "
+                  media="(max-width:1200px)"
+                />
+                <img
+                  class="img--team"
+                  srcset="
+                    ./images/iVNickDesk.jpg    1x,
+                    ./images/iVNickDesk@2x.jpg 2x,
+                    ./images/iVNickDesk@3x.jpg 3x
+                  "
+                  src="./images/iVNick.jpg"
+                  alt="Иван Николаев"
+                />
+              </picture>
+            </div>
             <div class="our-team__card">
-              <h3 class="our-team__name">Martin Doe</h3>
+              <h3 class="our-team__name">Иван Николаев</h3>
               <p class="our-team__profession">UI Designer</p>
               <ul class="social-list">
                 <li class="social-list__item">

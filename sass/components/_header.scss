@@ -1,14 +1,16 @@
 .header {
+  position: relative;
   outline: none;
   border-bottom: 0px solid $headder-border;
 }
-.header--portfolio {
-  outline: none;
-  border-bottom: 1px solid $headder-border;
-}
+
 @media screen and (min-width: $desktop) {
   .header {
     outline: none;
     border-bottom: 0px solid $headder-border;
   }
+}
+.header--portfolio {
+  outline: none;
+  border-bottom: 1px solid $headder-border;
 }

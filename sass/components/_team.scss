@@ -1,27 +1,14 @@
 /* OUR TEAM */
-
+// .img {
+//   max-width: 100%;
+//   display: block;
+//   height: auto;
+// }
 .container--our-team {
   flex-direction: column;
   padding: 60px 15px;
 }
-@media screen and (min-width: $desktop) {
-  .container--our-team {
-    padding: 94px 0;
-  }
-  .our-team__title {
-    margin-bottom: 50px;
 
-    font-size: 36px;
-  }
-  .our-team__card {
-    width: 270px;
-  }
-  .our-team__list {
-    width: 1170px;
-
-    flex-direction: row;
-  }
-}
 .our-team__title {
   margin-top: 0;
   margin-bottom: 30px;
@@ -39,7 +26,7 @@
   background-color: $grey-svg-color;
 }
 .our-team__card {
-  width: 450px;
+  max-width: 450px;
   padding: 30px 32px 24px 32px;
 
   display: flex;
@@ -55,7 +42,7 @@
 }
 
 .our-team__list {
-  width: 450px;
+  // max-width: 450px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -75,74 +62,81 @@
     margin-bottom: 30px;
   }
 }
-.our-team__member:before {
-  content: '';
-  display: block;
-  width: 450px;
-  height: 320px;
-  background-size: cover;
-  width: 100%;
-
-  border-radius: 4px 4px 0px 0px;
-
-  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 1px 3px rgba(0, 0, 0, 0.12);
+.our-team__member {
+  max-width: 450px;
 }
+// .our-team__member:before {
+//   content: '';
+//   display: block;
+//   width: 450px;
+//   height: 320px;
+//   background-size: cover;
+//   width: 100%;
+
+//   border-radius: 4px 4px 0px 0px;
+
+//   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+//     0px 1px 3px rgba(0, 0, 0, 0.12);
+// }
 
 @media screen and (min-width: $tablet) {
-  .our-team__member:before {
+  // .our-team__member:before {
+  //   width: 354px;
+  //   height: 260px;
+  // }
+  .our-team__card,
+  .img--team {
     width: 354px;
-    height: 260px;
-  }
-  .our-team__card {
-    width: 354px;
-    @media screen and (min-width: $desktop) {
-      width: 270px;
-    }
-  }
-
-  @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
-    .our-team__member:not(:nth-child(n + 3)) {
-      margin-bottom: 30px;
-    }
-  }
-
-  .our-team__list {
-    width: 738px;
-    flex-direction: row;
-    flex-wrap: wrap;
-    @media screen and (min-width: $desktop) {
-      width: 1200px;
-      padding: 0 15px;
-    }
   }
 }
-.our-team__member:before {
-  content: '';
-  display: block;
-  width: 450px;
-  height: 320px;
-  background-size: cover;
+@media screen and (min-width: $desktop) {
+  .our-team__card,
+  .img--team {
+    width: 270px;
+  }
+}
+@media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
+  .our-team__member:not(:nth-child(n + 3)) {
+    margin-bottom: 30px;
+  }
+}
+
+.our-team__list {
   width: 100%;
-
-  border-radius: 4px 4px 0px 0px;
-
-  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 1px 3px rgba(0, 0, 0, 0.12);
+  flex-direction: row;
+  flex-wrap: wrap;
+  @media screen and (min-width: $desktop) {
+    width: 100%;
+    padding: 0 15px;
+  }
 }
 
-.our-team__member--01:before {
-  background-image: url('../../images/johnSmith.jpg');
-}
-.our-team__member--02:before {
-  background-image: url('../../images/martaSteward.jpg');
-}
-.our-team__member--03:before {
-  background-image: url('../../images/robertJakis.jpg');
-}
-.our-team__member--04:before {
-  background-image: url('../../images/martinDoe.jpg');
-}
+// .our-team__member:before {
+//   content: '';
+//   display: block;
+//   width: 450px;
+//   height: 320px;
+//   background-size: cover;
+//   width: 100%;
+
+//   border-radius: 4px 4px 0px 0px;
+
+//   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+//     0px 1px 3px rgba(0, 0, 0, 0.12);
+// }
+
+// .our-team__member--01:before {
+//   background-image: url('../../images/johnSmith.jpg');
+// }
+// .our-team__member--02:before {
+//   background-image: url('../../images/martaSteward.jpg');
+// }
+// .our-team__member--03:before {
+//   background-image: url('../../images/robertJakis.jpg');
+// }
+// .our-team__member--04:before {
+//   background-image: url('../../images/martinDoe.jpg');
+// }
 
 .our-team__name {
   margin: 0 0 10px 0;
@@ -168,4 +162,23 @@
   letter-spacing: 0.03em;
 
   color: $primary-text-color;
+}
+
+@media screen and (min-width: $desktop) {
+  .container--our-team {
+    padding: 94px 0;
+  }
+  .our-team__title {
+    margin-bottom: 50px;
+
+    font-size: 36px;
+  }
+  .our-team__card {
+    width: 270px;
+  }
+  .our-team__list {
+    width: 1170px;
+
+    flex-direction: row;
+  }
 }
